@@ -1,0 +1,68 @@
+<!-- <ul class="list-group">
+  <th style="color: rgb(196, 194, 207);" >KİTAPLAR</th>
+  <li
+    (click)="setCurrentBook(book)"
+    *ngFor="let book of books" 
+    [class]="getCurrentBookClass(book)"
+  >
+    {{ book.bookName }}
+  </li>
+</ul> -->
+<div class="container">
+  <div class="row mt-4" style="margin-left: 1%">
+    <div
+      *ngFor="let bookDetail of bookDetails"      
+      class="card mt-2 mr-2"
+      style="
+        width: 15rem;
+        margin-right: 10px;
+        background-color: rgb(157, 163, 163);
+        opacity: 0.9;
+      "
+    >
+      <div  *ngFor="let item of bookDetail.bookImages">
+        <img
+        style="padding-top: 15px; "
+          src="{{baseUrl}}{{ item.imagePath }}"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+
+      <div class="card-body"></div>
+
+      <div>
+        <h5 style="font-weight: bold">
+          <thead> 
+            <td>
+              {{ bookDetail.bookName }}
+            </td>
+          </thead>
+        </h5>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item"
+            style="color: black; background-color: rgb(157, 163, 163)"
+          >
+           <strong>Sayfa Sayısı: </strong> {{ bookDetail.pageCount }} 
+            <strong>Açıklama: </strong>{{ bookDetail.description | slice : 0 : 50 }}...
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="card-body">
+          <div class="row">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+             routerLink="/books/bookDetail/{{bookDetail.bookId}}"
+            >
+              Devamını Oku
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

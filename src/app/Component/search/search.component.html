@@ -1,0 +1,21 @@
+<form  class="d-flex"  role="search">
+  <input
+    [(ngModel)]="filterText"
+    class="form-control me-2"
+    type="search"
+    name="filterText"
+    placeholder="Kitap Arayınız..."
+    aria-label="Search"
+  />
+  <button
+  style="width: 8em; vertical-align:middle; opacity: 0.7; color: azure;"
+    routerLink="/books/{{ filterText }}"
+    class="btn btn-secondary"
+    type="submit"
+  >
+  <span>Ara </span>
+  </button>
+</form>
+
+
+

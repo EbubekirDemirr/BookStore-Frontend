@@ -1,0 +1,54 @@
+
+
+
+<div
+  class="card"
+  style="
+    background-color: rgb(157, 163, 163);
+    border-radius: 25px;
+    opacity: 0.9;
+  "
+>
+  <div class="row" style="border-radius: 25px">
+    <div class="col-md-4">
+      <img
+        style="padding: 15px"
+        src="{{ baseUrl }}{{ bookDetail.bookImages[0].imagePath }}"
+        class="card-img-top"
+        alt="..."
+      />
+    </div>
+    <div class="col-md-8" style="border-radius: 25px">
+      <div class="card-body">
+        <h1 class="card-title" style="font-weight: bold">
+          {{ bookDetail.bookName }}
+        </h1>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item"
+            style="
+              color: black;
+              background-color: rgb(157, 163, 163);
+              border: none;
+            "
+          >
+            <i><strong>Açıklama:</strong> {{ bookDetail.description }}</i>
+          </li>
+          <li
+            class="list-group-item"
+            style="background-color: rgb(157, 163, 163); border: none"
+          >
+            <i><strong>Sayısı:</strong> {{ bookDetail.pageCount }}</i>
+          </li>
+        </ul>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-outline-dark">
+              <strong>SATIN AL</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<!-- <ul class="list-group" >
+  <th style="color: rgb(196, 194, 207);" >YAZARLAR</th>
+  <li
+    (click)="setCurrentAuthor(author)"
+    routerLink="/authors/bookAndAuthor/{{ author.id }}"
+    *ngFor="let author of authors"
+    [class]="getCurrentAuthorClass(author)"
+  >
+    {{ author.authorFirstName }}
+    {{ author.authorLastName }}
+  </li>
+</ul> -->
+
+<div class="container">
+  <div class="row mt-4">
+    <div *ngFor="let authorDetail of authorDetails" class="col-md-4 mb-4">
+      <div
+        style="background-color: rgb(157, 163, 163); opacity: 0.9"
+        class="card h-100"
+      >
+        <img
+        style="padding: 15px ;"
+          src="{{ baseUrl }}{{ authorDetail.authorImages[0].imagePath }}"
+          class="card-img-top rounded-lg"
+          alt="..."
+        />
+
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">
+            <strong>
+              {{ authorDetail.authorFirstName }}
+              {{ authorDetail.authorLastName }}</strong
+            >
+          </h5>
+          <p class="card-text" style="color: black;">
+            {{ authorDetail.biography }}
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            routerLink="/authors/bookAndAuthor/{{ authorDetail.authorId }}"
+          >
+            Yazarın Kitapları
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

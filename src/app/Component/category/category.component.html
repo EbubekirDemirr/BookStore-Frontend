@@ -1,0 +1,41 @@
+<!-- <ul class="list-group">
+  <th style="color: rgb(196, 194, 207)">KATEGORİLER</th>
+  <li
+    (click)="setCurrentCategory(category)"
+    routerLink="/categories/bookAndCategory/{{ category.id }}"
+    *ngFor="let category of categories"
+    [class]="getCurrentCategoryClass(category)"
+  >
+    {{ category.categoryName }}
+  </li>
+</ul> -->
+
+<div
+  class="card mb-9"
+  style="color: rgb(17, 16, 20); background-color: rgb(157, 163, 163); opacity: 0.9;"
+>
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center; font-family: Cursive">
+      İstediğiniz noktalara ulaşmanın tek yolu kitaplardır.
+    </h5>
+    <p class="card-text" style="text-align: center; font-family: Cursive">
+      <br />
+      Roman ve hikayeler sizi başka diyarlara götürür. Farklı bakış açıları
+      kazandırır.
+      <br />
+      Biyografiler hayatınıza yön vermenize yardımcı olur.
+      <br />
+      Şiirler ise duygularınızı besler.
+    </p>
+    <a
+      (click)="setCurrentCategory(category)"
+      routerLink="/categories/bookAndCategory/{{ category.id }}"
+      *ngFor="let category of categories"
+      [class]="getCurrentCategoryClass(category)"
+      href="#"
+      class="btn btn-dark"
+      style="font-weight:bold; font-family: Cursive"
+      >{{ category.categoryName }}</a
+    >
+  </div>
+</div>

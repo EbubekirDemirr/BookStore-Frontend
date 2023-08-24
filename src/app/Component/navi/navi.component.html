@@ -1,0 +1,175 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" style="color: azure;" href="#">Anasayfa</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle item-text-color-bekir-gri"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: azure;"
+          >
+            Kategoriler
+          </a>
+          <ul
+            class="dropdown-menu item-text-color-bekir-gri"
+            style="background-color: rgb(122, 122, 136)"
+          >
+            <li>
+              <a
+                routerLink="/categories"
+                class="dropdown-item"
+                style="background-color: rgb(122, 122, 136); color: black"
+                href="#"
+                >KATEGORİ</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle item-text-color-bekir-gri"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: azure;"
+          >
+            Yazarlar
+          </a>
+          <ul
+            class="dropdown-menu item-text-color-bekir-gri"
+            style="background-color: rgb(122, 122, 136)"
+          >
+            <li>
+              <a
+                routerLink="/authors"
+                class="dropdown-item"
+                style="background-color: rgb(122, 122, 136); color: black"
+                href="#"
+                >YAZARLAR</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle item-text-color-bekir-gri"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: azure;"
+          >
+            Kitaplar
+          </a>
+          <ul
+            class="dropdown-menu item-text-color-bekir-gri"
+            style="background-color: rgb(122, 122, 136)"
+          >
+            <li>
+              <a
+                routerLink="/books"
+                class="dropdown-item"
+                style="background-color: rgb(122, 122, 136); color: black"
+                href="#"
+                >KİTAP</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="row">
+        <app-search></app-search>
+      </div>
+      &nbsp;
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div>
+        <div class="d-flex">
+          <div class="me-2">
+            <button
+              *ngIf="!isAuthenticated()"
+              type="button"
+              class="btn btn-secondary"
+              routerLink="/login"
+            >
+              Giriş
+            </button>
+          </div>
+          <div>
+            <button
+              *ngIf="!isAuthenticated()"
+              type="button"
+              class="btn btn-secondary"
+              routerLink="register"
+              style="color: azure;"
+            >
+              Kaydol
+            </button>
+          </div>
+        </div>
+
+        <div *ngIf="isAuthenticated()">
+          <div class="btn-group">
+            <button
+              style="color: azure;"
+              class="btn btn-dark dropdown-toggle "
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ userInfo?.userName }}
+            </button>
+            <ul
+              style="background-color: rgb(122, 122, 136)"
+              class="dropdown-menu w-100 text-center"
+            >
+              <li
+                style="background-color: rgb(122, 122, 136); color: azure"
+                class="btn dropdown-item"
+              >
+                Profil
+              </li>
+              <li
+                style="background-color: rgb(122, 122, 136); color: azure"
+                class="btn dropdown-item"
+                (click)="logout()"
+              >
+                Çıkış yap
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</nav>
