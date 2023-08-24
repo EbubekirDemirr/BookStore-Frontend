@@ -1,27 +1,44 @@
-# LibraryFrontend
+# BookStoreProject- Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+# Tecnologies
+<li> Angular 11</li>
+<li> TypeScript </li>
+<li> Bootstrap 5 </li>
+<li> Jquery </li>
+<h3> FrontendTechniques </h3>
+<li> Pipe </li>
+<li> JWT (@auth0/angular-jwt) </li>
+<li> Service </li>
+<li> Toastr Service</li>
+<br>
+<br>
+<br>
+<p>
+  Angular Framework ile geliştirdiğim bu projede typescript
+programlama dili kullanıldı. Navbarda yazarlar, kategoriler,
+kitaplar bulunan dropdownlar, anasayfaya yönlendiren buton,
+tüm sayfalarda arama yapabileceğiniz search bar ve user login,
+logout buttonları bulunmaktadır. Yazarlar, kategoriler veya
+kitaplara tıklandığında ilgili sayfaya yönlendirip içeriği bize
+tam haliyle vermektedir. Ayrıca örneğin yazarlar sayfasında
+herhangi bir yazara tıklandığında bize yazara ait tüm kitapları
+getirmektedir. Bunlar için özelleştirilmiş componentler ve
+servisler bulunmaktadır. CSS Frameworkü olarak bootstrap
+kullanıldı.
 
-## Development server
+</p>
+<br>
+<h1>Screenshots
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/BookComponent.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/BookDetailComponent.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/BookDetailComponent1.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/CategoryComponent.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/AuthorComponent.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/BookAndAuthorComponent.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/BookAndAuthorComponent1.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/Search%20Box.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/Login.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/Register.png"><br>
+<img src="https://github.com/EbubekirDemirr/BookStore-Frontend/blob/main/src/ScreenShot/HomePage.png"><br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
